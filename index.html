@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Compressor</title>
+
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎬 Video Compressor</h1>
+
+        <p>Compress your video easily</p>
+
+        <input type="file" id="videoInput" name="video" accept="video/*">
+        
+        <p id="fileInfo"></p>
+
+        <button>Compress Video</button>
+
+        <a id="downloadLink" style="display:none;">Download Compressed Video</a>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
