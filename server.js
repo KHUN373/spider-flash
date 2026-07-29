@@ -24,7 +24,8 @@ const upload = multer({
 });
 
 
-app.use(express.static("."));
+app.use(express.json({ limit: "500mb" }));
+app.use(express.urlencoded({ extended: true, limit: "500mb" }));
 
 
 // Upload + Compress
