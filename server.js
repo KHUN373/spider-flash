@@ -24,8 +24,7 @@ const upload = multer({
 });
 
 
-app.use(express.json({ limit: "500mb" }));
-app.use(express.urlencoded({ extended: true, limit: "500mb" }));
+app.use(express.static("."));
 
 
 // Upload + Compress
@@ -166,12 +165,13 @@ app.post("/upload", upload.single("video"), (req, res) => {
 
 
 // Server Start
-const PORT = process.env.PORT || 3000;
+const server = app.listen(3000, () => {
 
-const server = app.listen(PORT, () => {
     console.log(
-        `Server running on port ${PORT}`
+        "Server running on port 3000"
     );
+
 });
+
 
 server.timeout = 10 * 60 * 1000;
